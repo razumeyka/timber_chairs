@@ -1,0 +1,721 @@
+@font-face {
+  font-family: 'Vocal-Light';
+  src: url('../fonts/Vocal-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/Vocal-Light.woff') format('woff'), url('../fonts/Vocal-Light.ttf')  format('truetype'), url('../fonts/Vocal-Light.svg#Vocal-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 10px;
+}
+
+body{
+	margin:0;
+	padding: 0;
+	font-family: 'Vocal-Light', sans-serif;
+	font-size: 14px;
+	line-height:1.4;
+	min-width: 300px;
+    color: #5c594d;
+}
+
+.wrapper {
+     max-width:1200px;
+     padding:0 40px;
+     margin:0 auto;
+}
+
+header .menu {
+    background-color: #5c594d;
+    height: 60px;
+}
+
+header .menu .navbar ul {
+    display: block;
+    padding: 10px;
+    margin: 0 0 0-30px;
+    overflow: hidden;
+}
+
+header .menu .navbar ul li {
+    float: left;
+    list-style: none;
+    margin: 10px;
+}
+
+header .menu nav ul li a {
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+}
+
+header .menu nav ul a:after{
+    content: '';
+    display: block;
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: #7ab9cc; 
+   	transition: width 0.3s ease-out; 
+    -moz-transition: width 0.8s 0.1s ease;
+    -o-transition: width 0.8s 0.1s ease;
+    -webkit-transition: width 0.8s 0.1s ease;
+}
+
+header .menu nav ul a:hover:after {
+	width: 100%; 
+}
+
+header .menu .phone {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+header .menu .phone a {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    padding: 0;
+}
+
+header .burger {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    background: #fff;
+    width: 44px;
+    height: 45px;
+    left: 40px;
+    top: 7px;
+    border: 1px solid #5c594d;
+    border-radius: 4px;
+}
+
+header .burger span, .burger span::before, .burger span::after {
+    cursor: pointer;
+    border-radius: 5px;
+    height: 3px;
+    width: 30px;
+    background: #5c594d;
+    position: absolute;
+    display: block;
+    top: 11px;
+    left: 7px;
+    transition: all 200ms ease-in-out;
+}
+
+
+header .burger span::before {
+    content: '';
+    left: 0;
+}
+
+header .burger span::after {
+    content: '';
+    left: 0;
+    top: 22px;
+}
+
+header .burger.active span {
+    background-color: transparent;
+}
+    
+ header .burger.active span::before  {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+ header .burger.active span::after  {
+    transform: rotate(-45deg);
+    top: 10px;
+} 
+
+.first_screen {
+    background-image: url(../img/main_background.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 600px;
+    padding: 70px 0;
+}
+
+.first_screen .wrapper {
+    position: relative;
+}
+
+.first_screen .proposition {
+    background-color: white;
+    padding: 30px 20px;
+    max-width: 700px;
+}
+
+.first_screen h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.first_screen h1 span {
+    font-size: 60px;
+    color: #e86a4b;
+}
+
+.first_screen h2 {
+    font-size: 20px;
+    text-transform: none;
+    text-align: left;
+}
+
+.step1 {
+    position: relative;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.step1::before, .step2::before, .step3::before {
+    content: "";
+    background-image: url(../img/back.png);
+    background-position: -1px -110px;
+    background-size: 800px;
+    width: 150px;
+    height: 250px;
+    position: absolute;
+    left: 200px;
+    top: 10px;
+}
+
+.step2::before {
+    background-position: -320px -110px;
+}
+
+.step3::before {
+    background-position: -650px -110px;
+}
+
+h2 {
+    text-align: left;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-left: 300px;
+}
+
+.step1 .stand {
+    padding: 70px 0;
+}
+
+.step1 .stand img{
+    width: 60%;
+    float: left;
+}
+
+.step1 table {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    margin-left: 50px;
+    border-collapse: collapse;
+}
+
+.step1 table th {
+    font-size: 20px;
+    padding: 10px 10px 20px;
+}
+
+.step1 table td {
+    padding: 0;
+}
+
+.step1 table .bordered {
+    border: 1px solid #d5d4d0;
+}
+
+.step1 table .top_bordered {
+    border-top: 1px solid #d5d4d0;
+}
+
+.step1 table .special {
+    border-bottom: 1px solid #ffffff;
+}
+
+.step1 table .prices td {
+    background-color: #5c594d;
+    padding: 20px 10px;
+    font-size: 18px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.step1 table .prices .noprice {
+    background-color: #ffffff;
+}
+
+.step1 table img {
+    width: 50px;
+}
+
+.step2 {
+    position: relative;
+    padding: 50px 0 100px;
+    background-color: #f4f7f7;
+}
+
+.step2 .types {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px -20px 0;
+}
+
+.step2 .types .fancybox-wrapper {
+    box-sizing: border-box;
+    width: 33.3333%;
+    padding: 20px;
+}
+
+.step2 .types img {
+    width: 100%;
+}
+
+.step2 .textile, .step1 .type, .step1 .price  {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.step3 {
+    position: relative;
+    padding: 50px 0;
+}
+
+.step3 form {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border: solid 1px rgb(205, 205, 205);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 40px 20px;
+    background-color: #f4f7f7;
+    margin-top: 130px;
+}
+
+.step3 form span {
+    display: block;
+    box-sizing: border-box;
+    width: 33.3333%;
+    padding: 10px;
+}
+
+.step3 form input, .step3 form button {
+    display: block;
+    box-sizing: border-box;
+    padding: 0 15px;
+    font-size: 14px;
+    width: 100%;
+    border: solid 1px rgb(205, 205, 205);
+    border-radius: 5px;
+    height: 46px;
+}
+
+.step3 form button {
+    background-color: #f0cf01;
+    border: solid 1px #f0b002;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.8s 0.1s ease;
+    -moz-transition: background-color 0.8s 0.1s ease;
+    -o-transition: background-color 0.8s 0.1s ease;
+    -webkit-transition: background-color 0.8s 0.1s ease;
+    outline: none;
+}
+
+.step3 form button:hover {
+    background-color: #fce13c;
+}
+
+.advantages {
+    padding: 50px 0;
+    background-color: #f4f7f7;
+}
+
+h3 {
+    text-align: center;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.advantages .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.advantage {
+    box-sizing: border-box;
+    width: 33.333%;
+    padding: 15px;
+}
+
+.advantage img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+}
+
+.advantage .text {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.advantage .text h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.gallery {
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.gallery .photos {
+    white-space: nowrap;
+    margin-left: -200px;
+}
+
+.gallery .photos a {
+    text-decoration: none;
+}
+
+.gallery img{
+   height: 300px; 
+}
+
+.order {
+    background-image: url(../img/background_main5.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 900px;
+    padding: 30px 0;
+}
+
+.order form {
+    background-color: rgba(163, 198, 221, 0.5);
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 70px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px #7e8c99;
+    border-radius: 5px;
+}
+
+.order form input, .order form select {
+    display: block;
+    width: 100%; 
+    height: 50px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px auto;
+    box-sizing: border-box;
+    border: none;
+}
+
+.order form button {
+    background-color: #4d66b1;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px #f8f9fa;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    padding: 14px;
+    letter-spacing: 0.8px;
+    width: 100%;
+    transition: background-color 0.8s 0.1s ease;
+    -moz-transition: background-color 0.8s 0.1s ease;
+    -o-transition: background-color 0.8s 0.1s ease;
+    -webkit-transition: background-color 0.8s 0.1s ease;
+}
+
+.order form button:hover {
+    background-color: #6787e7;
+}
+
+.thx, .err {
+    display: none;
+    box-sizing: border-box;
+    border: 5px solid #4d66b1;
+    text-align: center;
+    font-size: 20px;
+}
+
+footer {
+    background-color: #4d66b1;
+}
+
+footer .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+footer .contacts, footer .cooperation{
+    max-width: 320px;
+    color: white;
+    padding: 10px 0;
+}
+
+footer .contacts a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+footer .contacts a:hover {
+    color: #f7a801;
+    font-weight: bold;
+}
+
+footer .cooperation {
+    text-align: right;
+}
+
+footer .bold {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+
+
+@media screen and (max-width: 1050px) {
+    .first_screen h1 {
+        padding-top: 30px;
+        max-width: 770px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .first_screen h2 {
+        max-width: 700px;
+        position: relative;
+        z-index: 2;
+    } 
+    
+    .first_screen .for_sale1 {
+        right: 10px;
+        top: -10px;
+    }
+
+    .first_screen .for_sale2 {
+        right: 560px;
+        top: 290px;
+    }
+}
+
+
+@media screen and (max-width: 933px) {
+    .step1::before, .step2::before, .step3::before {
+       left: 50px;
+    }
+    
+    h2 {
+        margin-left: 170px;
+    }
+}
+
+@media screen and (max-width: 867px) {
+    
+    header .menu .navbar {
+        display: none;
+    }
+    
+    header .burger {
+        display: block;
+    }
+    
+    header .menu .navbar ul {
+        position: absolute;
+        z-index: 3;
+        top: 60px;
+        left: 55px;
+    }
+    
+    header .menu .navbar ul li {
+        float: none;
+        background-color: #5ebcbd;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 5px;
+    }
+    
+    header .menu nav ul li:hover {
+        background-color: rgb(247, 217, 4);
+        box-shadow: 0px 0px 3px #f0b002;
+    }
+    
+    .first_screen .for_sale1 {
+        display: none;
+    }
+    
+    .step1 .stand img{
+        width: 100%;
+        float: none;
+    }
+    
+    .step1 table {
+        margin: 50px 0 0;
+    }
+    
+    .step2 .types .fancybox-wrapper {
+    width: 100%;
+    }
+    
+    .step3 form span {
+    width: 50%;
+    }
+    
+    .advantage {
+    width: 100%;
+    }
+    
+    .gallery img{
+    height: 200px; 
+    }
+    
+    .order form {
+    padding: 50px 30px;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    
+    .first_screen .circle {
+        right: -200px;
+        top: 70px;
+    }
+    
+   .first_screen .for_sale2 {
+        right: 360px;
+        top: 340px;
+    }
+    
+    .first_screen .for_sale3 {
+        right: 250px;
+        top: 470px;
+    }
+    
+    footer .wrapper {
+        justify-content: center;
+    }
+    
+    footer .contacts, footer .cooperation {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .step1::before, .step2::before, .step3::before {
+        background-size: 500px;
+        width: 90px;
+        height: 150px;
+    }
+
+    .step1::before {
+        background-position: -1000px -70px;
+    }
+
+    .step2::before {
+        background-position: -1200px -70px;
+    }
+
+    .step3::before {
+        background-position: -1410px -70px;
+    }
+    
+    h2 {
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    
+    .wrapper {
+         padding:0 15px;
+    }
+    
+    header .burger {
+         left: 15px;   
+    }
+    
+    header .menu .navbar ul {
+        left:30px;
+    }
+    
+    .first_screen .for_sale2 {
+        display: none;
+    }
+    
+    .first_screen .for_sale3 {
+        display: none;
+    }
+    
+    .step1::before, .step2::before, .step3::before {
+    top: 60px;
+    }
+
+    .step3 form span {
+    width: 100%;
+    }
+    
+    .gallery img{
+    height: 150px; 
+    }
+}
+
+@media screen and (max-width: 410px) {
+    
+    .first_screen {
+        height: 630px;
+    }
+    
+    .first_screen h1 {
+        font-size: 30px;
+    }
+    
+    .first_screen .circle {
+        width: 440px;
+        height: 440px;
+        right: -160px;
+        top: 150px;
+    }
+    
+    .first_screen .circle_wrapper {
+        width: 340px;
+        height: 340px;
+    }
+
+    .first_screen .circle img {
+        width: 400px;
+    }
+
+}
